@@ -1,0 +1,4 @@
+hi: Assalomu alaykum ${full_name}\n\nTilni tanlang!
+
+start:
+  what-is-your-name: To'liq ism familyangizni kiriting

@@ -7,6 +7,7 @@
   "dependencies": {
     "dotenv": "^14.3.2",
     "telegraf": "^4.6.0",
+    "telegraf-i18n": "^6.6.0",
     "telegraf-session-redis": "^5.1.0",
     "winston": "^3.5.0"
   },

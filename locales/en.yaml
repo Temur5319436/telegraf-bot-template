@@ -1,0 +1,4 @@
+hi: Wellcome ${full_name}\n\nSelect language!
+
+start:
+  what-is-your-name: Enter your full name
