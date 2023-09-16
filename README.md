@@ -1,6 +1,12 @@
 # Telegram Bot Template
 
-This is a template for building a Telegram bot using the Telegraf.js framework, Telegraf-i18n for localization, Prisma as an ORM for database operations, and Telegraf-session-redis for session management. Use this template as a starting point for your Telegram bot project.
+This is a template for building a Telegram bot using the Telegraf.js framework with Scenes, Telegraf-i18n for localization, Prisma as an ORM for database operations, and Telegraf-session-redis for session management. Use this template as a starting point for your Telegram bot project.
+
+
+## Screenshot
+
+![Screenshot](https://repository-images.githubusercontent.com/692398531/ac778e6e-13e1-417a-acf9-9982ad1a0bb2)
+
 
 ## Prerequisites
 
