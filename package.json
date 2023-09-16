@@ -1,8 +1,16 @@
 {
-  "name": "evos-delivery-bot",
+  "name": "telegraf-bot-template",
+  "keywords": [
+    "telegraf",
+    "prisma",
+    "telegraf-i18n",
+    "telegraf-session-redis",
+    "scenes",
+    "winston"
+  ],
   "version": "1.0.0",
   "main": "src/main.js",
-  "author": "mcpeblocker",
+  "author": "Temur531946",
   "license": "MIT",
   "dependencies": {
     "@prisma/client": "5.3.1",
