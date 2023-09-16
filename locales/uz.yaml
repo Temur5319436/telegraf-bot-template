@@ -1,4 +1,13 @@
 hi: Assalomu alaykum ${full_name}\n\nTilni tanlang!
 
 start:
-  what-is-your-name: To'liq ism familyangizni kiriting
+  what-is-your-name: To'liq ism familyangizni kiriting!
+
+phone-number:
+  enter: Salom ${full_name}\n\nTelefon raqamingizni yuboring!
+
+
+buttons:
+  phone-number: Telefon raqamini yuborish!
+
+info: Sizning to'liq ism familyangiz `${full_name}`\n\nSizning telefon raqamingiz `${phone_number}!`

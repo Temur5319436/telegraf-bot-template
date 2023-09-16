@@ -11,12 +11,11 @@ datasource db {
 }
 
 model Conversation {
-  id BigInt @id @default(autoincrement())
+  id Int @id @default(autoincrement())
 
-  chat_id     String? @unique
-  first_name  String
-  last_name   String?
-  middle_name String?
+  chat_id    String? @unique
+  first_name String
+  last_name  String?
 
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt

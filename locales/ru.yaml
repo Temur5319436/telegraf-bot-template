@@ -1,0 +1,14 @@
+hi: Добро пожаловать, ${full_name}\n\nВыберите язык!
+
+start:
+   what-is-your-name: Введите свое полное имя!
+
+phone-number:
+  enter: Привет, ${full_name}\n\nОтправьте свой номер телефона!
+
+
+buttons:
+   phone-number: Отправьте свой номер телефона!
+
+
+info: Ваше полное имя `${full_name}`\n\nВаш номер телефона `${phone_number}`

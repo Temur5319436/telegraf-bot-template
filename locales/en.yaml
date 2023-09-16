@@ -1,4 +1,14 @@
 hi: Wellcome ${full_name}\n\nSelect language!
 
 start:
-  what-is-your-name: Enter your full name
+  what-is-your-name: Enter your full name!
+
+phone-number:
+  enter: Hi ${full_name}\n\nSend your phone number!
+
+
+buttons:
+  phone-number: Send your phone number!
+
+
+info: Your full name is `${full_name}`\n\nYour phone number is `${phone_number}!`

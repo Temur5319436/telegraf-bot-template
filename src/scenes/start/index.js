@@ -3,7 +3,6 @@ const { Scenes } = require("telegraf");
 const scene = new Scenes.BaseScene('start');
 
 scene.enter(async (ctx) => {
-    ctx.i18n.locale('uz')
 
     await ctx.reply(ctx.i18n.t('hi', { full_name: ctx.from.first_name }), {
         reply_markup: {
@@ -22,7 +21,13 @@ scene.action(/([uz|en|ru])/, async (ctx) => {
 
     await ctx.deleteMessage()
 
-    await ctx.reply(ctx.i18n.t('start.what-is-your-name'))
+    await ctx.i18n.locale(ctx.callbackQuery.data)
+
+    await ctx.reply(ctx.i18n.t('start.what-is-your-name'), {
+        reply_markup: {
+            remove_keyboard: true,
+        }
+    })
 })
 
 scene.on('text', (ctx) => {
