@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+
+  database:
+    image: postgres:14
+    container_name: database
+
+    environment:
+      - POSTGRES_DB=bot_db
+      - POSTGRES_USER=bot_user
+      - POSTGRES_PASSWORD=password
+
+    volumes:
+      - ./data/bot-database:/var/lib/postgresql/data
+
+    ports:
+      - "15432:5432"
+
+  redis:
+    image: redis
+    container_name: redis
+
+    volumes:
+      - ./data/bot-cache/:/data
+
+    ports:
+      - "16379:6379"
+
+  bot:
+    build: .
+    container_name: bot
+
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - BOT_TOKEN=${BOT_TOKEN}
+      - DATABASE_URL=postgresql://bot_user:password@database:5432/bot_db?schema=public
+      - SESSION_TYPE=redis
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+
+    command: ./enterpoint.sh

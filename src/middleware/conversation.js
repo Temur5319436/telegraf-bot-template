@@ -8,7 +8,7 @@ const prisma = require('../core/prisma')
  * @param {function} next 
  */
 async function conversation(ctx, next) {
-    await ctx.replyWithChatAction('typing')
+    await ctx.replyWithChatAction('typing').catch(() => { })
 
     if (ctx.session.conversation) {
         return next()

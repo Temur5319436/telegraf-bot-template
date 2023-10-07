@@ -15,6 +15,12 @@ scene.enter(async (ctx) => {
     });
 });
 
+scene.hears(/(^[a-zA-z])/, (ctx) => {
+    ctx.session.data = { full_name: ctx.message.text }
+
+    ctx.scene.enter('phone_number')
+})
+
 
 scene.action(/([uz|en|ru])/, async (ctx) => {
     await ctx.answerCbQuery()
@@ -30,10 +36,5 @@ scene.action(/([uz|en|ru])/, async (ctx) => {
     })
 })
 
-scene.on('text', (ctx) => {
-    ctx.session.data = { full_name: ctx.message.text }
-
-    ctx.scene.enter('phone_number')
-})
 
 module.exports = scene;
